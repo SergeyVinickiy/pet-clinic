@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.vinickiy.pet-clinic' is invalid and this project uses 'com.vinickiy.petclinic' instead.
+* The original package name 'com.vinickiy.pet-clinic' is invalid and this project uses 'com.vinickiy.com.vinickiy.petclinic' instead.
 
 # Getting Started
 
