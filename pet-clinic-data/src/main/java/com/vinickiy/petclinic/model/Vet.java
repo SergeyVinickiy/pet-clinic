@@ -1,4 +1,4 @@
 package com.vinickiy.petclinic.model;
 
-public class Wet extends Person{
+public class Vet extends Person{
 }
