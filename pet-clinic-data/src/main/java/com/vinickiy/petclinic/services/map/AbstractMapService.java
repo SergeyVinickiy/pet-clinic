@@ -12,7 +12,7 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
 
     T findById(ID id){return map.get(id);}
 
-    T save(ID id, T object){
+    T save(T object){
 
         if(object != null){
             if(object.getId() == null){
@@ -38,7 +38,7 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
      try{
          nextId = Collections.max(map.keySet()) +1;
      }
-     catch (NullPointerException e){
+     catch (NoSuchElementException  e){
          nextId = 1L;
      }
         return nextId;
