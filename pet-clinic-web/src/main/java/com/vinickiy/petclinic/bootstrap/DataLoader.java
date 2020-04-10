@@ -1,8 +1,10 @@
 package com.vinickiy.petclinic.bootstrap;
 
 import com.vinickiy.petclinic.model.Owner;
+import com.vinickiy.petclinic.model.PetType;
 import com.vinickiy.petclinic.model.Vet;
 import com.vinickiy.petclinic.services.OwnerService;
+import com.vinickiy.petclinic.services.PetTypeService;
 import com.vinickiy.petclinic.services.VetService;
 import com.vinickiy.petclinic.services.map.OwnerServiceMap;
 import com.vinickiy.petclinic.services.map.VetServiceMap;
@@ -14,21 +16,25 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
-
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
+
 
     @Override
     public void run(String... args) throws Exception {
 
-        loadData();
+        PetType dog =  new PetType();
+        dog.setName("Dog");
+        PetType saveDogPetType = petTypeService.save(dog);
 
-    }
-
-    private void loadData() {
+        PetType cat =  new PetType();
+        dog.setName("Cat");
+        PetType saveCatPetType = petTypeService.save(cat);
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
@@ -52,6 +58,8 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet2);
 
         System.out.println("Loaded Vets....");
+
     }
+
 
 }
