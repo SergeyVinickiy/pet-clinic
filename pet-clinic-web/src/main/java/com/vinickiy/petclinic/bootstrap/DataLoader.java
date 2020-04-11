@@ -7,7 +7,6 @@ import com.vinickiy.petclinic.services.SpecialtyService;
 import com.vinickiy.petclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
 import java.time.LocalDate;
 
 @Component
