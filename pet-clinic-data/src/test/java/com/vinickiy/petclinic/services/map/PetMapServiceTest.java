@@ -1,5 +1,11 @@
 package com.vinickiy.petclinic.services.map;
 
+import com.vinickiy.petclinic.model.Pet;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.Set;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class PetMapServiceTest {
